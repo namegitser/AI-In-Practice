@@ -1,0 +1,191 @@
+[
+  {
+    "id": "Q03",
+    "kind": "single_hop",
+    "mode": 2,
+    "mode_name": "chunk_boundary",
+    "evidence": "needs_human_check: open the chunks around the gold answer",
+    "question": "Is maternity covered on the Bronze plan?",
+    "answer": "No, maternity is not covered on the Bronze plan at any sum insured [1][2]."
+  },
+  {
+    "id": "Q04",
+    "kind": "single_hop",
+    "mode": 2,
+    "mode_name": "chunk_boundary",
+    "evidence": "needs_human_check: open the chunks around the gold answer",
+    "question": "What is the waiting period for pre-existing diseases?",
+    "answer": "The waiting period for pre-existing diseases is 36 months on standard retail plans, unless explicitly waived in writing by Aurora on the policy schedule [3][5]. For the Aurora Senior Care plan (ages 60 and above), the waiting period for pre-existing diseases is reduced to 24 months [5]."
+  },
+  {
+    "id": "Q05",
+    "kind": "single_hop",
+    "mode": 2,
+    "mode_name": "chunk_boundary",
+    "evidence": "needs_human_check: open the chunks around the gold answer",
+    "question": "How long is the grace period for an annual policy?",
+    "answer": "The grace period for an annual policy is 30 days from the renewal due date [1][5]."
+  },
+  {
+    "id": "Q10",
+    "kind": "single_hop",
+    "mode": 2,
+    "mode_name": "chunk_boundary",
+    "evidence": "needs_human_check: open the chunks around the gold answer",
+    "question": "Who can I escalate to if Aurora rejects my claim and their internal response is unsatisfactory?",
+    "answer": "If you are not satisfied with the initial outcome, you can escalate the matter to Aurora's Grievance Redressal Officer (GRO) [2]. If Aurora's final response remains unsatisfactory, you may approach the Insurance Ombudsman for your region [1]."
+  },
+  {
+    "id": "Q11",
+    "kind": "single_hop",
+    "mode": 2,
+    "mode_name": "chunk_boundary",
+    "evidence": "needs_human_check: open the chunks around the gold answer",
+    "question": "How much ambulance cover is there?",
+    "answer": "All plans include road ambulance cover of ₹5,000 per hospitalisation [1]. Additionally, the Aurora Gold plan provides air ambulance cover of up to ₹2,50,000 per policy year within India on prior authorisation [5]."
+  },
+  {
+    "id": "Q19",
+    "kind": "multi_hop",
+    "mode": 2,
+    "mode_name": "chunk_boundary",
+    "evidence": "needs_human_check: open the chunks around the gold answer",
+    "question": "I am on Silver with a 5 lakh sum insured and took a room at Rs 15,000 per day. Will everything be paid?",
+    "answer": "No, everything will not be paid because proportionate deductions will apply [1][5]. On a Silver plan with a ₹5,00,000 sum insured, the room-rent limit is"
+  },
+  {
+    "id": "Q20",
+    "kind": "multi_hop",
+    "mode": 2,
+    "mode_name": "chunk_boundary",
+    "evidence": "needs_human_check: open the chunks around the gold answer",
+    "question": "My mother is 63 and I want to add her to my policy. Which plans allow it and what changes?",
+    "answer": "Dependent parents can be added to Silver (at an extra premium), Gold, and Platinum plans, but are not allowed on the Bronze plan [1]. When a parent is added, the overall policy premium is determined by the age of the eldest member covered, which often costs more than an individual senior-citizen pol"
+  },
+  {
+    "id": "Q21",
+    "kind": "multi_hop",
+    "mode": 2,
+    "mode_name": "chunk_boundary",
+    "evidence": "needs_human_check: open the chunks around the gold answer",
+    "question": "I am switching from another insurer. Will my 3 years of waiting period carry over if I increase my sum insured?",
+    "answer": "Credit for the waiting periods you have already served will carry over, but only up to the sum insured of your previous policy (including any accrued no-claim bonus) [1][2]. Any increase or excess in the sum insured will be subject to fresh waiting periods on that incremental amount [1][2]."
+  },
+  {
+    "id": "Q23",
+    "kind": "multi_hop",
+    "mode": 2,
+    "mode_name": "chunk_boundary",
+    "evidence": "needs_human_check: open the chunks around the gold answer",
+    "question": "Can I get an out-patient physiotherapy session reimbursed on Bronze?",
+    "answer": "I don't have enough information in the provided sources to answer that."
+  },
+  {
+    "id": "Q24",
+    "kind": "multi_hop",
+    "mode": 2,
+    "mode_name": "chunk_boundary",
+    "evidence": "needs_human_check: open the chunks around the gold answer",
+    "question": "I had a claim last year on Silver. What happens to my accumulated no-claim bonus?",
+    "answer": "A claim on the Aurora Silver plan reduces your accumulated no-claim bonus by 10 percentage points [1]. It does not reset the accumulated bonus to zero [1]."
+  },
+  {
+    "id": "Q26",
+    "kind": "multi_hop",
+    "mode": 2,
+    "mode_name": "chunk_boundary",
+    "evidence": "needs_human_check: open the chunks around the gold answer",
+    "question": "Is knee replacement covered immediately after I buy the policy?",
+    "answer": "Knee joint replacement is generally not covered immediately, as it is subject to a 24-month waiting period [1][5]. However, if the knee replacement is required following an accidental injury, it is covered immediately from day one [1][2][5]."
+  },
+  {
+    "id": "Q29",
+    "kind": "trap_archived",
+    "mode": 2,
+    "mode_name": "chunk_boundary",
+    "evidence": "needs_human_check: open the chunks around the gold answer",
+    "question": "How many days do I have to respond to a query Aurora raises on my claim?",
+    "answer": "The deadline depends on the claim type: you have 45 days from the date of the query to respond for reimbursement claims [5], and failing to respond within 45 days results in Aurora closing the claim [2]. However, for motor insurance claims, the deadline to respond to a query is 30 days from the date"
+  },
+  {
+    "id": "Q32",
+    "kind": "aggregation",
+    "mode": 2,
+    "mode_name": "chunk_boundary",
+    "evidence": "needs_human_check: open the chunks around the gold answer",
+    "question": "Which plans have no co-payment?",
+    "answer": "The Aurora Gold plan has no co-payment at all ages [1]. The Aurora Silver plan also has no co-payment for claims where the eldest insured member is below 60 years of age [2]."
+  },
+  {
+    "id": "Q35",
+    "kind": "aggregation",
+    "mode": 2,
+    "mode_name": "chunk_boundary",
+    "evidence": "needs_human_check: open the chunks around the gold answer",
+    "question": "List everything that is excluded relating to dental treatment.",
+    "answer": "Out-patient dental work is not covered under any plan [1]. Furthermore, dental treatment and oral surgery are permanently excluded across all Aurora indemnity plans, unless necessitated by an accidental injury that requires hospitalisation [2][3]."
+  },
+  {
+    "id": "Q36",
+    "kind": "unanswerable",
+    "mode": 1,
+    "mode_name": "missing_content",
+    "evidence": "gold answer content not found in the relevant documents",
+    "question": "What is the exact premium for a 35-year-old buying Gold with a 25 lakh sum insured in Bengaluru?",
+    "answer": "I don't have enough information in the provided sources to answer that."
+  },
+  {
+    "id": "Q37",
+    "kind": "unanswerable",
+    "mode": 2,
+    "mode_name": "chunk_boundary",
+    "evidence": "needs_human_check: open the chunks around the gold answer",
+    "question": "Does Aurora cover treatment in Singapore, and up to what limit?",
+    "answer": "I don't have enough information in the provided sources to answer that."
+  },
+  {
+    "id": "Q38",
+    "kind": "unanswerable",
+    "mode": 1,
+    "mode_name": "missing_content",
+    "evidence": "gold answer content not found in the relevant documents",
+    "question": "What is Aurora's claim settlement ratio for the last financial year?",
+    "answer": "I don't have enough information in the provided sources to answer that."
+  },
+  {
+    "id": "Q39",
+    "kind": "unanswerable",
+    "mode": 1,
+    "mode_name": "missing_content",
+    "evidence": "gold answer content not found in the relevant documents",
+    "question": "Can I use my Aurora policy to cover my dog's veterinary bills?",
+    "answer": "I don't have enough information in the provided sources to answer that."
+  },
+  {
+    "id": "Q40",
+    "kind": "unanswerable",
+    "mode": 2,
+    "mode_name": "chunk_boundary",
+    "evidence": "needs_human_check: open the chunks around the gold answer",
+    "question": "What is the phone number for the Aurora helpline?",
+    "answer": "I don't have enough information in the provided sources to answer that."
+  },
+  {
+    "id": "Q42",
+    "kind": "paraphrase",
+    "mode": 2,
+    "mode_name": "chunk_boundary",
+    "evidence": "needs_human_check: open the chunks around the gold answer",
+    "question": "The hospital said they won't do cashless. Am I finished?",
+    "answer": "No, a denial of cashless is not a rejection of the claim [1]. You can still file for reimbursement at any hospital where cashless was denied [3]."
+  },
+  {
+    "id": "Q44",
+    "kind": "paraphrase",
+    "mode": 2,
+    "mode_name": "chunk_boundary",
+    "evidence": "needs_human_check: open the chunks around the gold answer",
+    "question": "AUR-HI-SIL-2026 — what are the sum insured options?",
+    "answer": "I don't have enough information in the provided sources to answer that."
+  }
+]
