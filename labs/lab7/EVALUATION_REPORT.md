@@ -33,7 +33,7 @@ previous 0.75 floor correctly failed on this baseline. At 0.70, one additional
 false refusal would reduce precision to 5/8 = 0.625 and fail the gate. This is a
 small test set, so the metric should be treated as a warning signal rather
 than a precise population estimate.
-
+### CHECK [lab7_explainer.md](lab7_explainer.md) for LIVE uncached RUN RESULTS
 ## 3. Where it fails
 
 - **2 of 7 refusals were false refusals** on answerable questions (Q23 and Q44).
