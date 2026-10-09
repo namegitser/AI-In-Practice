@@ -22,6 +22,52 @@ Then read [`SYLLABUS.md`](SYLLABUS.md) and [`SCHEDULE.md`](SCHEDULE.md), then
 
 ---
 
+## Run the Lab 7 service
+
+After installing the dependencies with `make setup` (or `python -m pip install
+-r requirements.txt`), configure a provider key in your local `.env` file. Do
+not commit `.env` or paste a key into source code. In separate terminals, run:
+
+```powershell
+uvicorn labs.lab7.service:app --reload --port 8000
+streamlit run labs\lab7\ui.py
+streamlit run labs\lab7\dashboard.py
+```
+
+The API is available at `http://localhost:8000/docs`; the UI asks for
+`http://localhost:8000` by default. The dashboard is populated after requests
+have written spans to `.aip_traces/`. Exact answers persist in the AIP SQLite
+cache. Semantic answer reuse is opt-in with `AIP_SEMANTIC_CACHE=1`; its measured
+cosine threshold is `0.85` (see the evaluation report).
+
+Run the regression gate with `AIP_OFFLINE=1` only after the matching
+`.aip_cache/calls.sqlite3` has been reviewed and included in the checkout:
+
+```powershell
+$env:AIP_OFFLINE = "1"
+python labs\lab7\gate.py --config labs\lab7\thresholds.yml --json reports\lab7_gate.json
+```
+
+The cache is ignored by Git by default and is not included in a clean checkout.
+Without it, offline replay fails explicitly instead of contacting a model
+provider. See [the Lab 7 evaluation report](EVALUATION_REPORT.md) for measured
+limits and current gate results.
+
+For an explicit live-provider evaluation, configure the provider key in `.env`
+and run:
+
+```powershell
+python labs\lab7\gate.py --live --config labs\lab7\thresholds.yml --json reports\lab7_live_gate.json
+```
+
+`--live` bypasses cached chat responses for answer generation and LLM judging;
+cached embeddings may still be reused. The run uses the `AIP_PROFILE` in `.env`
+and is limited by `AIP_BUDGET_USD` (default `$2`). Live results can vary and may
+fail the offline-calibrated thresholds. Keep the live report separate from the
+deterministic offline gate report.
+
+---
+
 ## What you build
 
 Seven three-hour problems. Each one produces working code and a measured claim.

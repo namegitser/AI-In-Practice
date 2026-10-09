@@ -1,0 +1,10 @@
+{
+  "citation_validity": 1.0,
+  "correctness": 0.75,
+  "cost_per_query_usd": 0.0019399666666666667,
+  "faithfulness": 0.9777777777777777,
+  "hit_rate_at_5": 0.9761904761904762,
+  "p95_latency_ms": 13646.749999839813,
+  "refusal_precision": 0.7142857142857143,
+  "refusal_recall": 1.0
+}

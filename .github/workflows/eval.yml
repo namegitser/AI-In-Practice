@@ -1,0 +1,36 @@
+name: eval-gate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - name: Require the committed offline response cache
+        run: |
+          test -s .aip_cache/calls.sqlite3 || {
+            echo "::error::Commit .aip_cache/calls.sqlite3 for deterministic offline replay."
+            exit 1
+          }
+      - name: Run the Lab 7 regression gate
+        env:
+          AIP_OFFLINE: "1"
+          AIP_PROFILE: gemini
+        run: >-
+          python labs/lab7/gate.py
+          --config labs/lab7/thresholds.yml
+          --json reports/lab7_gate.json
+      - name: Upload evaluation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lab7-evaluation
+          path: reports/lab7_gate.json

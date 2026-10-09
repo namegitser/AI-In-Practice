@@ -17,11 +17,11 @@ patterns T1 and T2 describe.
 from __future__ import annotations
 
 import json
-import os
 import random
 import re
 import time
-from typing import Any, Sequence, Type, TypeVar
+from collections.abc import Sequence
+from typing import Any, TypeVar
 
 from pydantic import BaseModel, ValidationError
 
@@ -31,13 +31,6 @@ from aip.config import resolve_model, settings
 T = TypeVar("T", bound=BaseModel)
 
 Messages = Sequence[dict[str, Any]]
-
-
-def _cache_bypassed() -> bool:
-    return (
-        os.getenv("AIP_LLM_CACHE_BYPASS", "0").strip().lower()
-        in {"1", "true", "yes", "on"}
-    )
 
 
 class StructuredOutputError(RuntimeError):
@@ -99,8 +92,7 @@ def raw_call(
     }
     key = cache.make_key("chat", request)
 
-    bypass_cache = _cache_bypassed()
-    hit = None if bypass_cache else cache.get(key)
+    hit = cache.get(key)
     if hit is not None:
         usage = cost.Usage(
             model=model,
@@ -200,8 +192,7 @@ def raw_call(
         },
         "finish_reason": getattr(choice, "finish_reason", None),
     }
-    if not bypass_cache:
-        cache.put(key, "chat", request, result)
+    cache.put(key, "chat", request, result)
     return result
 
 
@@ -268,7 +259,7 @@ def extract_json(text: str) -> Any:
 def structured(
     prompt_or_messages: str | Messages,
     *,
-    schema: Type[T],
+    schema: type[T],
     system: str | None = None,
     tier: str = "SMALL",
     model: str | None = None,
